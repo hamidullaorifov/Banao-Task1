@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+{% block content %}
+  <div class="container">
+    <h1>Dashboard</h1>
+    <img src="{{request.user.picture_url}}" alt="Profile Picture">
+    <table>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>First Name</td>
+        <td>{{request.user.first_name}}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{request.user.last_name}}</td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td>{{request.user.username}}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>{{request.user.email}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{request.user.line1}}</td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>{{request.user.city}}</td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td>{{request.user.state}}</td>
+      </tr>
+      <tr>
+        <td>Pincode</td>
+        <td>{{request.user.pincode}}</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}
